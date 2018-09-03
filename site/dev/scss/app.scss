@@ -1,0 +1,108 @@
+html,
+body {
+    background-color: #f4f4f4;
+    font-family: 'Roboto', sans-serif;
+}
+
+.no-margin {
+    margin: 0px !important;
+}
+
+.no-padding {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.content {
+    margin-top: 1.5%;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+}
+
+.alm-nav-bar {
+    background-color: #073c7f;
+}
+
+.card {
+    border-radius: 0px;
+}
+
+.card-hotel {
+    padding: 1%;
+    margin-bottom: 1ex;
+    .hotel-img {
+        width: inherit;
+    }
+    .oferta {
+        text-align: center;
+        border-left: 1px lightgray;
+        border-left-style: dashed;
+        border-left-width: 1px;
+        button {
+            background-color: #002979;
+            width: 80%;
+            font-size: 22px;
+        }
+        .currency,
+        .amount {
+            color: #e16800;
+            font-weight: 600;
+        }
+        .currency {
+            font-size: 3ex;
+            vertical-align: text-bottom;
+        }
+        .amount {
+            font-size: 5ex;
+        }
+        .title {
+            margin-top: 20%;
+            font-size: 15px;
+        }
+    }
+    .hotel-detail {
+        .name {
+            color: #0679b3;
+            font-weight: 700;
+            font-size: 17px;
+        }
+        .amenities {
+            margin-top: 1ex;
+            .icon {
+                width: 1.25em;
+                vertical-align: initial;
+                margin: 5px;
+            }
+        }
+    }
+}
+
+.star {
+    width: 20px;
+}
+
+.filter-container {
+    %sp {
+        padding-left: 1em;
+        padding-top: 0.7ex;
+        padding-bottom: 0.7ex;
+    }
+    .spacing {
+        @extend %sp;
+    }
+    .cont {
+        display: flex;
+        border-bottom: 3px solid #f0f0f2;
+        .title {
+            @extend %sp;
+            font-weight: bold;
+        }
+        .btn-primary {
+            background-color: #002979;
+            width: 100%;
+        }
+    }
+    .text-color {
+        color: #0679b3;
+    }
+}

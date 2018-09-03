@@ -1,0 +1,30 @@
+<div class="card card-hotel">
+    <div class="row">
+        <div class="col-12 col-sm-4">
+            <img ng-src="./public/assets/images/hotels/{{::$ctrl.hotel.image}}" class="hotel-img" alt="">
+        </div>
+        <div class="col-12 col-sm-5 hotel-detail">
+            <div class="name">{{::$ctrl.hotel.name}}</div>
+            <div>
+                <img src="./public/assets/icons/filters/star.svg" ng-repeat="n in [] | range:$ctrl.hotel.stars" class="star" alt="">
+            </div>
+            <div class="amenities">
+                <img src="./public/assets/icons/amenities/{{::am}}.svg" class="icon" alt="" ng-repeat="am in $ctrl.hotel.amenities">
+            </div>
+        </div>
+        <div class="col-12 col-sm-3 oferta">
+            <span>
+                <div class="title">Precio por noche por habitacion</div>
+                <div>
+                    <span class="currency">ARS
+                    </span>
+                    <span class="amount">{{::$ctrl.hotel.price}}
+                    </span>
+                </div>
+                <div>
+                    <button class="btn btn-primary">Ver hotel</button>
+                </div>
+            </span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+// Extra Small devices 
+@media only screen and (max-width: 575.98px) {
+    .content {
+        margin: 0;
+        .menu {
+            padding: 0;
+        }
+        .result {
+            margin-top: 5%;
+            .card-hotel {
+                .oferta {
+                    border-left: none;
+                    border-top: 1px lightgray;
+                    border-top-style: dashed;
+                    border-top-width: 1px;
+                    margin-bottom: 10%;
+                    .title {
+                        margin-top: 5%;
+                    }
+                }
+                .hotel-detail {
+                    margin-top: 4%;
+                    margin-left: 1%;
+                    .name {
+                        margin-bottom: 3%;
+                    }
+                    .amenities {
+                        margin-bottom: 10%;
+                    }
+                }
+            }
+        }
+    }
+}

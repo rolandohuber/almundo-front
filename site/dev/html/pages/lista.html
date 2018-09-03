@@ -1,0 +1,80 @@
+<div class="row content">
+    <div class="col-12 col-md-3">
+        <div class="card filter-container">
+            <div class="filter-header cont">
+                <span class="title d-none d-sm-block">Filtros</span>
+                <span class="title d-block w-100 d-sm-none text-color text-center">
+                    Filtrar
+                    <i class="fa fa-chevron-up"></i>
+                </span>
+            </div>
+            <div class="filter-body">
+                <div class="cont row no-margin">
+                    <div class="filter-name-header row no-margin col-12 w-100 text-color title no-padding">
+                        <div class="col-1">
+                            <span class="fa fa-search"></span>
+                        </div>
+                        <div class="col-10 col-sm-9">
+                            Nombre del hotel
+                        </div>
+                        <div class="col-1">
+                            <i class="fa fa-chevron-up"></i>
+                        </div>
+                    </div>
+                    <div class="row no-margin col-12 w-100 filter-name-body spacing  no-padding">
+                        <div class="col-8">
+                            <input type="text" placeholder="Ingrese el nombre del hotel" class="w-100" ng-model="filtro.name">
+                        </div>
+                        <div class="col-3" style="padding: 0;" ng-click="search()">
+                            <button class="btn btn-block btn-primary btn-sm">Aceptar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cont row no-margin">
+                    <div class="row no-margin col-12 w-100 filter-stars-header text-color title  no-padding">
+                        <div class="col-1">
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <div class="col-10 col-sm-9">
+                            Estrellas
+                        </div>
+                        <div class="col-1">
+                            <i class="fa fa-chevron-up"></i>
+                        </div>
+                    </div>
+                    <div class="row no-margin col-12 w-100 filter-stars-body  no-padding">
+                        <div class="col-11">
+                            <div ng-click="allStar = !allStar;starsChange();">
+                                <input type="checkbox" ng-model="allStar"> Todas las estrellas
+                            </div>
+                            <div ng-click="fiveStar = !fiveStar;starsChange();">
+                                <input type="checkbox" ng-model="fiveStar">
+                                <img src="./public/assets/icons/filters/star.svg" ng-repeat="n in [] | range:5" class="star" alt="">
+                            </div>
+                            <div ng-click="fourStar = !fourStar;starsChange();">
+                                <input type="checkbox" ng-model="fourStar">
+                                <img src="./public/assets/icons/filters/star.svg" ng-repeat="n in [] | range:4" class="star" alt="">
+                            </div>
+                            <div ng-click="threeStar = !threeStar;starsChange();">
+                                <input type="checkbox" ng-model="threeStar">
+                                <img src="./public/assets/icons/filters/star.svg" ng-repeat="n in [] | range:3" class="star" alt="">
+                            </div>
+                            <div ng-click="twoStar = !twoStar;starsChange();">
+                                <input type="checkbox" ng-model="twoStar">
+                                <img src="./public/assets/icons/filters/star.svg" ng-repeat="n in [] | range:2" class="star" alt="">
+                            </div>
+                            <div ng-click="oneStar = !oneStar;starsChange();">
+                                <input type="checkbox" ng-model="oneStar">
+                                <img src="./public/assets/icons/filters/star.svg" ng-repeat="n in [] | range:1" class="star" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-12 col-md-9 result">
+        <hotel-row ng-repeat="a in lista" hotel="a"></hotel-row>
+    </div>
+</div>
